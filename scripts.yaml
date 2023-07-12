@@ -1,0 +1,4 @@
+scripts:
+  build: |
+    antlr4ts -visitor -Xexact-output-dir -o src/parser/dist src/parser/Main.g4
+    deno run --allow-read --allow-write convert.ts
