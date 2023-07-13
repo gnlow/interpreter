@@ -39,6 +39,12 @@ implements MainVisitor<Expr>
             args: ctx.expr().map(x => this.visit(x))
         }
     }
+    visitDotExpr(ctx: A.DotExprContext) {
+        return {
+            op: "<|" as const,
+            args: ctx.expr().reverse().map(x => this.visit(x))
+        }
+    }
     visitParenExpr(ctx: A.ParenExprContext) {
         return this.visit(ctx.expr())
     }
