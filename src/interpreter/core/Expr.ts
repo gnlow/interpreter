@@ -1,10 +1,10 @@
 export type Op =
-    | "Arrow"
-    | "Join"
-    | "Mul"
-    | "Dot"
-    | "And"
-    | "Is"
+    | "*"
+    | "/"
+    | "+"
+    | "-"
+    | "->"
+    | ";"
 
 export type Expr =
     | { value: number | string }
@@ -13,8 +13,8 @@ export type Expr =
 
 type BinOp = (a: Expr, b: Expr) => Expr
 
-const binOp =
+export const binOp =
     (op: Op): BinOp =>
     (a, b) => ({op, args: [a, b]})
 
-export const Arrow = binOp("Arrow")
+export const Arrow = binOp("->")

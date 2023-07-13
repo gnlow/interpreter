@@ -4,3 +4,5 @@ import Visitor from "./interpreter/Visitor.ts"
 export const run =
     (code: string) =>
     interpret(new Visitor())(code)
+
+export * from "./interpreter/core/Expr.ts"
