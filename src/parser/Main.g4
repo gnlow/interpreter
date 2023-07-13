@@ -1,16 +1,15 @@
 grammar Main;
 
 expr
-    : ID
-    | Number
-    | '#' '(' expr (';' expr)* ')'
-    | expr expr
-    | expr ('*' | '/') expr
-    | expr ('+' | '-') expr
-    | <assoc=right> expr '->' expr
-    | <assoc=right> expr ':' expr
-    | expr ';' expr
-    | '(' expr ')'
+    : ID                            # IDExpr
+    | Number                        # NumberExpr
+    | expr expr                     # AppExpr
+    | expr ('*' | '/') expr         # BinExpr
+    | expr ('+' | '-') expr         # BinExpr
+    | <assoc=right> expr '->' expr  # BinExpr
+    | <assoc=right> expr ':' expr   # BinExpr
+    | expr ';' expr                 # Binexpr
+    | '(' expr ')'                  # ParenExpr
     ;
 
 Sharp:  '#';
