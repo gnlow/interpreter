@@ -1,0 +1,6 @@
+{
+    "imports": {
+        "antlr4ts": "https://denopkg.com/jabo-lang/antlr4ts-deno/mod.ts",
+        "antlr4ts/": "https://denopkg.com/jabo-lang/antlr4ts-deno/src/"
+    }
+}
