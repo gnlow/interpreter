@@ -5,7 +5,7 @@ const ripIndent = (line: string) => line.replace(/^ */, "")
 
 export const indentPreprocess =
     (text: string) =>
-    $(text)
+    $(text.trim())
     .split("\n")
     .map(x => x.join(""))
     .map(line => ({line, indent: getIndent(line)}))
@@ -21,6 +21,6 @@ export const indentPreprocess =
         return indent
     }, 0, {line: "", indent: 0})
     .flat()
-    // .bypass(x => console.log(x.join("").slice(2, -2)))
+    .bypass(x => console.log(x.join("").slice(2, -2)))
     .toString()
     .slice(2, -2)

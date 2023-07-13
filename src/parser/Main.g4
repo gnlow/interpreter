@@ -9,7 +9,7 @@ expr
     | expr ('+' | '-') expr         # BinExpr
     | <assoc=right> expr '->' expr  # BinExpr
     | <assoc=right> expr ':' expr   # BinExpr
-    | expr ';' expr                 # Binexpr
+    | expr ';' expr                 # BinExpr
     | '(' expr ')'                  # ParenExpr
     ;
 

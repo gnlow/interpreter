@@ -6,8 +6,7 @@ import * as A from "./deps.ts"
 
 import {
     Expr,
-    Op,
-    binOp
+    Op
 } from "./core/Expr.ts"
 
 export default
@@ -15,8 +14,8 @@ class Visitor
 extends AbstractParseTreeVisitor<Expr>
 implements MainVisitor<Expr>
 {
-    defaultResult(): never {
-        throw new Error("Couldn't parse")
+    defaultResult() {
+        return { value: "__TODO__" }
     }
 
     visitConstantExpr(ctx: A.ConstantExprContext) {
@@ -28,11 +27,19 @@ implements MainVisitor<Expr>
     visitNumberExpr(ctx: A.NumberExprContext) {
         return { value: Number(ctx.text) }
     }
-
     visitBinExpr(ctx: A.BinExprContext) {
         return {
             op: ctx.getChild(1).text as Op,
             args: ctx.expr().map(x => this.visit(x))
         }
+    }
+    visitAppExpr(ctx: A.AppExprContext) {
+        return {
+            op: "<|" as const,
+            args: ctx.expr().map(x => this.visit(x))
+        }
+    }
+    visitParenExpr(ctx: A.ParenExprContext) {
+        return this.visit(ctx.expr())
     }
 }

@@ -6,6 +6,7 @@ export type Op =
     | "->"
     | ";"
     | ":"
+    | "<|"
 
 export type Expr =
     | { value: number | string }
