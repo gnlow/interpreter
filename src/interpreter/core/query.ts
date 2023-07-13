@@ -9,14 +9,14 @@ export const query =
         .with({ constant: P.select() }, name => {
             return match(data)
             .returnType<Expr>()
-            .with({
-                op: ":",
-                args: [
+            .with(
+                { op: ":", args: [
                     { constant: name },
                     P.select(),
-                ]
-             }, val => val)
-             .otherwise(() => "any")
+                ]},
+                val => val,
+            )
+            .otherwise(() => "any")
         })
         .otherwise(() => "any")
     }
