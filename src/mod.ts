@@ -1,7 +1,7 @@
 import interpret from "./parser/mod.ts"
 import Visitor from "./interpreter/Visitor.ts"
 
-export const run =
+export const parse =
     (code: string) =>
     interpret(new Visitor())(code)
 

@@ -21,19 +21,6 @@ export const indentPreprocess =
         return indent
     }, 0, {line: "", indent: 0})
     .flat()
-    .bypass(x => console.log(x.join("").slice(2, -2)))
+    // .bypass(x => console.log(x.join("").slice(2, -2)))
     .toString()
     .slice(2, -2)
-
-console.log(indentPreprocess(
-`a:
-    data + 2
-    b:
-        c -> d
-        e: #
-            f g i
-            123.5
-            k
-        foo
-    hello`
-))

@@ -3,3 +3,4 @@ dist
 .antlr
 
 input.txt
+temp.ts
