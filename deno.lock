@@ -185,5 +185,16 @@
     "https://denopkg.com/jabo-lang/antlr4ts-deno@master/src/tree/xpath/XPathTokenElement.ts": "54e1d76eefdd8a7e72ffe516354db977c3d27b145cc3f2eb85e75dcd4fea8362",
     "https://denopkg.com/jabo-lang/antlr4ts-deno@master/src/tree/xpath/XPathWildcardAnywhereElement.ts": "11c1703a8aa4110dab6a3cac90fc98875ce0910ce9fa3f4bd083c4aebace3dd5",
     "https://denopkg.com/jabo-lang/antlr4ts-deno@master/src/tree/xpath/XPathWildcardElement.ts": "da82d055f64880faee420b502810c880ae7867bd5697667f5b82772ff57274da"
+  },
+  "npm": {
+    "specifiers": {
+      "ts-pattern@5.0.1": "ts-pattern@5.0.1"
+    },
+    "packages": {
+      "ts-pattern@5.0.1": {
+        "integrity": "sha512-ZyNm28Lsg34Co5DS3e9DVyjlX2Y+2exkI4jqTKyU+9/OL6Y2fKOOuL8i+7no71o74C6mVS+UFoP3ekM3iCT1HQ==",
+        "dependencies": {}
+      }
+    }
   }
 }

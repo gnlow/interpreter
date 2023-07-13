@@ -6,3 +6,4 @@ export const parse =
     interpret(new Visitor())(code)
 
 export * from "./interpreter/core/Expr.ts"
+export * from "./interpreter/core/query.ts"
