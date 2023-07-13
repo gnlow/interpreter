@@ -1,7 +1,8 @@
 grammar Main;
 
 expr
-    : ID                            # IDExpr
+    : Constant                      # ConstantExpr
+    | Variable                      # VariableExpr
     | Number                        # NumberExpr
     | expr expr                     # AppExpr
     | expr ('*' | '/') expr         # BinExpr
@@ -24,7 +25,8 @@ Div:    '/';
 Add:   '+';
 Sub:  '-';
 
-ID:     [$_a-zA-Z] [_a-zA-Z0-9]*;
+Constant: [$_a-z] [_a-zA-Z0-9]*;
+Variable: [A-Z] [_a-zA-Z0-9]*;
 Number: ('0' | [1-9] [0-9]*) ('.' [0-9]+)?;
 
 WS:     [ \t\n\r]+ -> channel(HIDDEN);
