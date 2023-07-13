@@ -23,3 +23,16 @@ export const indentPreprocess =
     .flat()
     .bypass(x => console.log(x.join("")))
     .toString()
+
+console.log(indentPreprocess(
+`a:
+    data + 2
+    b:
+        c -> d
+        e: #
+            f g i
+            123.5
+            k
+        foo
+    hello`
+))
