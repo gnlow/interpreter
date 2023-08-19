@@ -188,11 +188,16 @@
   },
   "npm": {
     "specifiers": {
-      "ts-pattern@5.0.1": "ts-pattern@5.0.1"
+      "ts-pattern@5.0.1": "ts-pattern@5.0.1",
+      "ts-pattern@5.0.5": "ts-pattern@5.0.5"
     },
     "packages": {
       "ts-pattern@5.0.1": {
         "integrity": "sha512-ZyNm28Lsg34Co5DS3e9DVyjlX2Y+2exkI4jqTKyU+9/OL6Y2fKOOuL8i+7no71o74C6mVS+UFoP3ekM3iCT1HQ==",
+        "dependencies": {}
+      },
+      "ts-pattern@5.0.5": {
+        "integrity": "sha512-tL0w8U/pgaacOmkb9fRlYzWEUDCfVjjv9dD4wHTgZ61MjhuMt46VNWTG747NqW6vRzoWIKABVhFSOJ82FvXrfA==",
         "dependencies": {}
       }
     }
